@@ -17,6 +17,9 @@ class BaseCharacter{
 
         // virtual: can be inheritted and altered by child class
         virtual void tick(float deltaTime);
+        
+        //pure virtual function
+        virtual Vector2 getScreenPos() = 0;
 
     protected:
         Vector2 screenPos{};
@@ -40,6 +43,7 @@ class BaseCharacter{
         float height{};
 
         float scale{4.0f};
+        Vector2 velocity{};
 
     private:
 
